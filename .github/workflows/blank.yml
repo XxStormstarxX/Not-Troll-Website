@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <img src="https://i.imgur.com/maStk86.png" class="trollface" width=200px>
+  </body>
+</html>
+    
+<css>
+      HTML CSSResult Skip Results Iframe
+.trollface
+{
+  opactiy:0;
+  animation: troll 3s;
+  animation-iteration-count: infinite;
+  position:relative;
+}
+
+@keyframes troll
+{
+  0% { opacity: 0; transform: rotate(0deg); width:200px;left:0px; background-color:red}
+  16.66%{background-color:orange;}
+  33.33%{background-color:yellow;}
+  50% { opacity: 1; width: 400px;left:400px; background-color:lime;}
+  66.66%{background-color:turquoise;}
+  83.33%{background-color:#9900ff;}
+  100% { opacity: 0; transform: rotate(360deg);width:200px;left:0px; background-color:red}
+}
+</css>
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
